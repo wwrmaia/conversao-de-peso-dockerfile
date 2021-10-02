@@ -7,8 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace ConversaoPeso.Web
-{
+namespace ConversaoPeso.Web - Versão 2.0
     public class Program
     {
         public static void Main(string[] args)
