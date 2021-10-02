@@ -27,8 +27,8 @@ jobs:
       - name: Docker Build and Push
         uses: docker/build-push-action@v2.7.0
         with:
-          context: .
-          file: ./dockerfile
+          context: ./ConversaoPeso.Web
+          file: ./Dockerfile
           push: true
           tags: |
             wwrmaia/conversao-peso:latest
@@ -43,11 +43,11 @@ jobs:
       - name: Kubernetes set context
         uses: Azure/k8s-set-context@v1.1
         with:
-          method: kuberconfig
-          kuberconfig: ${{ secrets.K8S_KUBECONFIG }}
+          method: kubeconfig
+          kubeconfig: ${{ secrets.K8S_KUBECONFIG }}
           
       - uses: Azure/k8s-deploy@v1.3
         with:
           images: wwrmaia/conversao-peso:${{github.run_number}}
-          manifests:
+          manifests: |
             k8s/meudeployment.yaml
