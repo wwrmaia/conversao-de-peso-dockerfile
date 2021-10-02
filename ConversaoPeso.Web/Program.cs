@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace ConversaoPeso.Web
+{
     public class Program
     {
         public static void Main(string[] args)
