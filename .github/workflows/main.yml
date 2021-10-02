@@ -32,7 +32,7 @@ jobs:
           push: true
           tags: |
             wwrmaia/conversao-peso:latest
-            wwrmaia/conversao-peso:{github.run_number}}
+            wwrmaia/conversao-peso:${github.run_number}}
   
   CD:    
     needs: [CI]
@@ -50,4 +50,4 @@ jobs:
         with:
           images: wwrmaia/conversao-peso{github.run_number}}
           manifests:
-            k8s/meudeployment.yaml
+            ConversaoPeso.Web/k8s/meudeployment.yaml
