@@ -50,4 +50,4 @@ jobs:
         with:
           images: wwrmaia/conversao-peso{github.run_number}}
           manifests:
-            ConversaoPeso.Web/k8s/meudeployment.yaml
+            k8s/meudeployment.yaml
